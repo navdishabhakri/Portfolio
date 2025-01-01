@@ -1,0 +1,992 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+
+/* Top Center Header */
+header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  z-index: 1000;
+}
+
+.nav-links li a:visited {
+  color: white;
+}
+/* Logo */
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+li a {
+  position: relative;
+  color: white;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-radius: 1rem;
+  top: 25px;
+  height: 5px;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  transition: 0.3s ease-in-out;
+}
+
+li a:hover::before {
+  width: 100%;
+}
+
+/* Visit GitHub Button */
+.visit-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  white-space: nowrap;
+}
+
+.visit-btn:hover {
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+  transform: scale(1.03);
+}
+
+#menu-icon {
+  font-size: 2rem;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1rem;
+  }
+
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+section {
+  min-height: 100vh;
+  padding: 8rem 12%;
+  width: 100%;
+  position: relative;
+}
+
+/* About Section (Full Page) */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem; /* Adjust gap between image and text */
+}
+
+.about img {
+  width: 30vw;
+  border-radius: 50%;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.info-box h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.info-box h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.info-box span {
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+}
+.btn group a:hover {
+  color: white;
+  background-color: black;
+}
+
+.btn {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.2s ease-in-out;
+  color: black;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+.github-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.github-btn:hover a {
+  color: white;
+}
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: black;
+}
+
+.socials i:hover {
+  transform: scale(1.1);
+}
+/* a:visited {
+    color: black; /* Same as the initial color */
+/* text-decoration: none; /* Ensure it matches the unvisited state */
+/* } */
+
+.btn2:hover {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.2s ease-in-out;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+.gg {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn2 {
+  border-radius: 3rem;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: 0.2s ease-in-out;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+}
+
+/* .btn a:visited {
+    color: black; /* Ensure visited state matches */
+/* } */
+
+section .experience {
+  margin-top: 10px;
+}
+
+/* Experience Section (Full Page) */
+.experience {
+  padding: 2rem 1.5rem;
+  min-height: 100vh; /* Take full viewport height */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.grid-card {
+  border: 2px solid black;
+  border-radius: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.grid-card:hover {
+  transform: scale(1.02);
+  background-color: black;
+  color: white;
+}
+
+.grid-card:hover i,
+.grid-card:hover span,
+.grid-card:hover h3.a,
+.grid-card:hover p {
+  color: white;
+}
+
+.grid-card i {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.grid-card span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.grid-card h3 {
+  font-size: 1.5rem;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  margin-bottom: 0.5rem;
+  background-clip: text;
+  color: transparent;
+}
+.text h1 {
+  font-size: 2.5rem; /* Adjust the size as needed */
+}
+
+.grid-card h3.a {
+  color: black;
+  font-size: 0.9rem; /* Adjust the size as needed */
+  font-weight: normal; /* Optional: adjust the weight if needed */
+  margin-bottom: 0.5rem;
+}
+
+.grid-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem; /* Increase the margin-bottom to add space between points */
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(219, 219, 219);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(0, 157, 255), rgb(255, 0, 255));
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.project-card {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  border: 2px solid black;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.project-card:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-10px) scale(1.02);
+}
+.project-card img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.project-card:hover .btn {
+  border: 2px solid white;
+  color: white;
+}
+.project-card:hover .btn:hover {
+  border: 2px solid white;
+  background-color: white;
+  color: white;
+}
+
+.project-card h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+footer ul li a {
+  color: black;
+  font-weight: 600;
+}
+.copyright {
+  font-size: 300;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1280px) {
+  header {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+  .about .about-container {
+    gap: 3rem;
+  }
+  .experience-info {
+    flex-direction: column;
+  }
+
+  /* .input input::placeholder {
+    font-size: 2.5rem;
+  } */
+
+  .accomplishments .slider {
+    padding: 2rem;
+  }
+  .accomplishments .slides {
+    gap: 2rem;
+  }
+  .accomplishments .slide {
+    flex-direction: column;
+    align-items: center;
+  }
+  .accomplishments .slide img {
+    width: 100%;
+    height: auto;
+  }
+  .accomplishments .title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+  header .logo {
+    font-size: 1rem;
+  }
+  header .visit-btn {
+    display: none;
+  }
+  .about-container {
+    flex-direction: column;
+  }
+
+  /* .input-box input::placeholder {
+    font-size: 1.5rem;
+  } */
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .accomplishments .slider {
+    padding: 1.5rem 1rem;
+  }
+  .accomplishments .slides {
+    gap: 1.5rem;
+  }
+  .accomplishments .slide img {
+    width: 100%;
+  }
+  .accomplishments .title {
+    font-size: 1.5rem;
+  }
+  .accomplishments .dots {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  header #menu-icon {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 3rem;
+    display: none;
+  }
+  .nav-links li {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  .nav-links.active {
+    display: block;
+  }
+  header {
+    padding: 1rem 5rem;
+    gap: 8rem;
+  }
+  header .logo {
+    font-size: 1.5rem;
+  }
+  .about-container img {
+    width: 100vw;
+  }
+
+  /* .input-box input::placeholder {
+    font-size: 1.5rem;
+  } */
+  footer ul {
+    gap: 1rem;
+  }
+  .accomplishments .slider {
+    padding: 1rem;
+  }
+  .accomplishments .slides {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .accomplishments .slide img {
+    width: 100%;
+    border-radius: 0.5rem;
+    height: auto;
+    max-width: 120%;
+    object-fit: cover;
+  }
+  .accomplishments .title {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  .accomplishments .dots {
+    gap: 0.5rem;
+  }
+  .accomplishments .prev,
+  .accomplishments .next {
+    font-size: 1.5rem;
+  }
+}
+
+/* ...existing code... */
+/* General Form Styles */
+/* Contact Section Styles */
+.contact {
+  text-align: center;
+  padding: 20px;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Flexbox container for the form and image */
+.pic {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px; /* Space between form and image */
+  flex-wrap: wrap; /* Ensures responsiveness */
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Form Box */
+.input-box {
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Group */
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+.form-group textarea {
+  margin-left: 8px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px; /* Space above the button */
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Input Icon Group */
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: black;
+}
+
+.input-icon input {
+  padding: 10px 10px 7px 40px; /* Extra padding for icon */
+  margin-left: 8px;
+  margin-bottom: 5px;
+}
+
+/* Textarea Styling */
+textarea {
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  resize: none;
+}
+
+textarea:focus,
+.input-icon input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic .image-container {
+  margin-right: 80px;
+}
+.contact-image {
+  max-width: 100%;
+  height: 400px;
+  width: 400px; /* Set a fixed width for the image */
+  object-fit: cover; /* Ensures the image fits well */
+}
+
+.form-group .btn {
+  margin-left: 8px;
+}
+/* Submit Button */
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin-left: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
+  transform: scale(1.02);
+}
+
+.btn-submit:active {
+  background-color: #004085;
+  transform: scale(1);
+}
+
+/* Additional General Styles */
+.contact-form {
+  width: 100%;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.input-box {
+  max-width: 500px;
+  margin-top: auto; /* Center horizontally */
+  margin-bottom: auto;
+  margin-right: 80px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 15px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.input-icon input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Adjust padding to make space for the icon */
+  font-size: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.input-icon input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  height: 80px;
+  resize: none;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+input::placeholder {
+  font-size: 1rem; /* Reduced size */
+  color: #888; /* Optional: lighter color */
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+.btn-submit {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.btn-submit:active {
+  background-color: #004085;
+  transform: scale(1);
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+.accomplishments {
+  padding: 2rem 1rem;
+  background-color: white; /* Light neutral background */
+  text-align: center;
+}
+
+.accomplishments h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50; /* Deep gray-blue for better contrast */
+  font-weight: bold;
+}
+
+.slider {
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  background-color: white;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.form-group {
+  padding-top: 10px;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 2rem; /* Increase padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.slide .title {
+  font-size: 1.8rem; /* Slightly larger for readability */
+  color: #34495e; /* Muted deep blue-gray */
+  font-weight: 600; /* Semi-bold for emphasis */
+  margin-bottom: 1.5rem; /* Balanced spacing */
+}
+
+.slide img {
+  max-height: 400px;
+  width: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(44, 62, 80, 0.7); /* Semi-transparent deep color */
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem; /* Balanced padding */
+  border-radius: 50%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(44, 62, 80, 0.9); /* Slightly darker on hover */
+  transform: scale(1.1); /* Subtle zoom effect */
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+/* Dots for navigation */
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  height: 12px;
+  width: 12px; /* Slightly larger for better visibility */
+  margin: 0 6px; /* Balanced spacing */
+  background-color: #dcdde1; /* Neutral gray */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot:hover {
+  background-color: #95a5a6; /* Light gray on hover */
+  transform: scale(1.2); /* Subtle zoom effect */
+}
+
+.dot.active {
+  background-color: #2c3e50; /* Match primary text color */
+}
